@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<!-- author:vinayan A V -->
+<!-- Date:12/11/2019 -->
+<!-- Tic tac toe game creation  -->
+<!-- for the company Neioton  -->
+<html>
+<head>
+	<title>Tic tac Toe</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<div class="body">
+	<!--Main Navigation-->
+	<header>
+
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand" href="#"><strong><h2>Tic tac toe </h2></strong></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+		</div>
+	</nav>
+
+</header>
+<!--Main Navigation-->
+<div class="container">
+	<div class="row">
+		<!-- UI for game -->
+
+		<div class="col-sm-6 col-xl-8 col-md-8 col-lg-8 " >
+			<div id="tic" >
+				<div class="col-sm-12 col-xl-12 col-md-12 col-lg-12 " >
+					<input type="button" class="z-depth-5 btn btn-light fr fc ld " onclick="placeValues(this)" value="" id="one" name="">
+					<input type="button" class="z-depth-5 btn btn-light fr sc" onclick="placeValues(this)" value="" id="two" name="">
+					<input type="button" class="z-depth-5 btn btn-light fr tc rd" onclick="placeValues(this)" value="" id="three" name="">
+				</div>
+				<div class="col-sm-12 col-xl-12 col-md-12 col-lg-12 " >
+
+					<input type="button" class="z-depth-5 btn btn-light sr fc" onclick="placeValues(this)" value="" id="four" name="">
+					<input type="button" class="z-depth-5 btn btn-light sr sc ld rd" onclick="placeValues(this)" value="" id="five" name="">
+					<input type="button" class="z-depth-5 btn btn-light sr tc" onclick="placeValues(this)" value="" id="six" name="">
+				</div>
+				<div class="col-sm-12 col-xl-12 col-md-12 col-lg-12 " >
+
+					<input type="button" class="z-depth-5 btn btn-light tr fc rd" onclick="placeValues(this)" value="" id="seven" name="">
+					<input type="button" class="z-depth-5 btn btn-light tr sc" onclick="placeValues(this)" value="" id="eight" name="">
+					<input type="button" class="z-depth-5 btn btn-light tr tc ld" onclick="placeValues(this)" value="" id="nine" name="">
+				</div></br>
+         	<div class="col-sm-12 col-xl-12 col-md-12 col-lg-12 " >
+                <input type="submit" class="btn btn-success" name="" onclick="clearAll()" value="Restart">
+				<input type="submit" class="btn btn-success" name="" onclick="FinalResult()" value="End">
+				</div>
+			</div>
+		</div>
+		<!-- Result of Game -->
+
+		<div class="col-sm-6 col-xl-4 col-md-4 col-lg-4 board">
+			<input type="text" hidden="" value="1" id="turn" name="">
+
+
+
+			<table class="table table-borderless" width="50%" >
+				<thead>
+					<tr>
+
+						<th scope="col">Player- X</th>
+						<th scope="col">Player- O</th>
+
+					</tr>
+
+				</thead>
+				<hr>
+				<tbody>
+
+					<tr>
+						<th scope="row" align="center"><input type="text" disabled="" value="0" id="x" name=""></th>
+						<td align="center"><input type="text"  value="0" disabled="" name="" id="o"></td>
+
+					</tr>
+
+				</tbody>
+			</table>
+			<div class="alerts" id="alerts" role="alert" align="center">
+				<input type="text" id="result" value="" name="">
+			</div>
+
+			<div class="alerts" role="alert" align="center">
+				<p id="moves">Player X moves</p>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+</div>
+	<script type="text/javascript" src="js/game.js"></script>
+</html>
